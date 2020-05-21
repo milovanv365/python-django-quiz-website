@@ -81,6 +81,7 @@ img {
 }
 
 .btn1 {
+    display: inline-block;
     min-width: 180px;
     background: #a3875b;
     padding: 0px 36px;
