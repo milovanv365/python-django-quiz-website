@@ -14,25 +14,25 @@
                 <div class="quiz-nav-box">
                     <nav class="quiz-header-links" role="navigation">
                         <div class="sm-only text-center">
-                            <a class="active" href="/signup/me" aria-current="page" disabled="">Step(2/5)</a>
+                            <a class="active" href="/quiz/step_three" aria-current="page" disabled="">Step(5/5)</a>
                         </div>
                         <div class="lg-only">
                             <a class="" href="/quiz/step_one" aria-current="page" disabled="">Step1</a>
-                            <a class="active" disabled="" href="/quiz/step_two">Step2</a>
+                            <a class="" disabled="" href="/quiz/step_two">Step2</a>
                             <a class="" disabled="" href="/quiz/step_three">Step3</a>
                             <a class="" disabled="" href="/quiz/step_four">Step4</a>
-                            <a class="" disabled="" href="/quiz/step_five">Step5</a>
+                            <a class="active" disabled="" href="/quiz/step_five">Step5</a>
                         </div>
                         <div class="header-progress-box lg-only">
                             <div class="HeaderProgress">
                                 <div class="HeaderProgress-bar inactive"></div>
-                                <div class="HeaderProgress-bar active"></div>
+                                <div class="HeaderProgress-bar active w-100"></div>
                                 <div class="HeaderProgress-steps">
                                     <span class="active"></span>
                                     <span class="active"></span>
-                                    <span class="inactive"></span>
-                                    <span class="inactive"></span>
-                                    <span class="inactive"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
+                                    <span class="active"></span>
                                 </div>
                             </div>
                         </div>
@@ -57,13 +57,13 @@
                 </div>
                 <div class="HeaderProgress sm-only">
                     <div class="HeaderProgress-bar inactive"></div>
-                    <div class="HeaderProgress-bar active"></div>
+                    <div class="HeaderProgress-bar active w-100"></div>
                     <div class="HeaderProgress-steps">
                         <span class="active"></span>
                         <span class="active"></span>
-                        <span class="inactive"></span>
-                        <span class="inactive"></span>
-                        <span class="inactive"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#nextBtn').click(function () {
-                document.location.href='/quiz/step_three'
+                document.location.href='/quiz/step_four'
             })
         });
     </script>
