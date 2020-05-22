@@ -114,7 +114,16 @@
             })
 
             $('#nextBtn').click(function () {
-                console.log('aaa')
+                let job = $('#job').val()
+                let address = $('#address').val()
+                let firstName = $('#firstName').val()
+                let experience = $('#experience').val()
+
+                localStorage.setItem('job', job)
+                localStorage.setItem('address', address)
+                localStorage.setItem('firstName', firstName)
+                localStorage.setItem('experience', experience)
+
                 document.location.href='/quiz/step_two'
             })
         });

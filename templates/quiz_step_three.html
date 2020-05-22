@@ -73,22 +73,20 @@
             <p class="sub-caption">La oss finne et lønnsestimat og hvordan din hverdag kan bli hos W Eiendomsmegling.</p>
             <div class="quiz-answer">
                 <div class="quiz-form-row quiz-2a">
-                    <span>Jeg har som mål å selge</span>
-                    <select class="main-select-input" id="sales">
-                        {% for x in sales_values %}
+                    <span>Jeg forventer å kjøre</span>
+                    <select class="main-select-input" id="distance">
+                        {% for x in distance_values %}
                             <option value="{{ x }}">{{ x }}</option>
                         {% endfor %}
                     </select>
-                    <span>boliger,</span>
-                </div>
-                <div class="quiz-form-row quiz-2b">
-                    <span>til en snitt provisjon på kr</span>
-                    <select class="main-select-input" id="commission">
-                        {% for x in commission_values %}
+                    <span>km i året i forbindelse med arbeid</span>
+                    <span>, og har behov for</span>
+                    <select class="main-select-input" id="dataUsage">
+                        {% for x in data_usage_values %}
                             <option value="{{ x }}">{{ x }}</option>
                         {% endfor %}
                     </select>
-                    <span>eks mva.</span>
+                    <span>GB databruk pr måneden i mobil bruk.</span>
                 </div>
             </div>
             <button type="button" class="btn1" id="nextBtn">Neste</button>
@@ -99,6 +97,12 @@
 {% block script %}
     <script type="text/javascript">
         $(document).ready(function () {
+            let distance = $('#distance').val()
+            let dataUsage = $('#dataUsage').val()
+
+            localStorage.setItem('distance', distance)
+            localStorage.setItem('dataUsage', dataUsage)
+
             $('#nextBtn').click(function () {
                 document.location.href='/quiz/step_four'
             })

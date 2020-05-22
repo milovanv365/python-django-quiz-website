@@ -73,22 +73,18 @@
             <p class="sub-caption">La oss finne et lønnsestimat og hvordan din hverdag kan bli hos W Eiendomsmegling.</p>
             <div class="quiz-answer">
                 <div class="quiz-form-row quiz-2a">
-                    <span>Jeg har som mål å selge</span>
-                    <select class="main-select-input" id="sales">
-                        {% for x in sales_values %}
-                            <option value="{{ x }}">{{ x }}</option>
+                    <span>Det som er de to viktigste tingene for meg for å både trives og ha suksess som megler er</span>
+                    <select class="main-select-input" name="thing_one" id="thing_one" >
+                        {% for x in important_things %}
+                            <option value="{{ x.value }}">{{ x.label}}</option>
                         {% endfor %}
                     </select>
-                    <span>boliger,</span>
-                </div>
-                <div class="quiz-form-row quiz-2b">
-                    <span>til en snitt provisjon på kr</span>
-                    <select class="main-select-input" id="commission">
-                        {% for x in commission_values %}
-                            <option value="{{ x }}">{{ x }}</option>
+                    <span>og</span>
+                    <select class="main-select-input" name="thing_two" id="thing_two">
+                        {% for x in important_things %}
+                            <option value="{{ x.value }}">{{ x.label }}</option>
                         {% endfor %}
                     </select>
-                    <span>eks mva.</span>
                 </div>
             </div>
             <button type="button" class="btn1" id="nextBtn">Neste</button>
@@ -99,7 +95,26 @@
 {% block script %}
     <script type="text/javascript">
         $(document).ready(function () {
+            $('select').change(function() {
+                let selectedOptions = $('select option:selected');
+                $('select option').removeAttr('disabled');
+                selectedOptions.each(function () {
+                    let value = this.value;
+                    if (value !== '') {
+                        let id = $(this).parent('select').prop('id');
+                        let options = $('select:not(#' + id + ') option[value="' + value + '"]');
+                        options.prop('disabled', 'true');
+                    }
+                });
+            });
+
             $('#nextBtn').click(function () {
+                let importantThingOne = $('#thing_one').val()
+                let importantThingTwo = $('#thing_two').val()
+
+                localStorage.setItem('importantThingOne', importantThingOne)
+                localStorage.setItem('importantThingTwo', importantThingTwo)
+
                 document.location.href='/quiz/step_five'
             })
         });

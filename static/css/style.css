@@ -323,6 +323,8 @@ img {
 }
 
 .quiz-content {
+    width: 60%;
+    margin: 0 auto;
     padding: 32px 16px;
     text-align: center;
     font-family: neue-haas-grotesk-display, sans-serif;
