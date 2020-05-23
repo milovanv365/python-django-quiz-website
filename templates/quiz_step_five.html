@@ -92,12 +92,48 @@
                 <div class="quiz-form-row text-left">
                     <p>
                         Du kan bruke skjemaet ved å trykke på knappen nedenfor så tar vi kontakt med deg,
-                        eller du kan sende oss en epost til stian@wmegling.
+                        eller du kan sende oss en epost til <b>stian@wmegling.no</b>.
                     </p>
-                    <p>no eller ringe oss på 91 90 93 15.</p>
+                    <p>no eller ringe oss på <b>91 90 93 15</b>.</p>
                 </div>
             </div>
-            <button type="button" class="btn1" id="nextBtn">Neste</button>
+            <a href="#" class="btn1" id="nextBtn" data-toggle="modal" data-target="#SeligBolig">Bli kontaktet</a>
+        </div>
+        <div class="modal hide fade" id="SeligBolig" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="enquiryPopup">
+                        <div class="modal-header border-0">
+                            <h4 class="modal-title w-100" id="selge_modal_title">
+                                <div class="popLogo"><img src="{% static 'assets/img/logo2.png' %}"></div>
+                            </h4>
+                            <button type="button" class="close" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></button>
+                        </div>
+                        <div class="modal-body" id="selge_form_body">
+                        <div id="validation_error_message" class="btn-danger text-center hide"></div>
+                        <form role="form" id="contact_form" class="contact_form" data-toggle="validator">
+                            <div class="formPoup din-box">
+                                <div class="popupRow">
+                                    <input type="text" name="name" id="name" placeholder="Navn">
+                                </div>
+                                <div class="popupRow">
+                                    <input type="text" name="email" id="email" placeholder="Epost">
+                                </div>
+                                <div class="popupRow">
+                                    <input type="text" name="phone" id="phone" placeholder="Tlf">
+                                </div>
+                                <div class="popupRow">
+                                    <input type="checkbox" name="user_agreement" id="user_agreement">
+                                </div>
+                                <div class="popupRow popupMubmit text-center">
+                                    <button type="submit" class="btn1 btnPadding profileButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send</font></font></button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -187,10 +223,6 @@
             const chapterB = getChapterByAnswer(importantThingTwo)
             $('.chapter-a').text(chapterA)
             $('.chapter-b').text(chapterB)
-
-            $('#nextBtn').click(function () {
-                document.location.href='/quiz/step_four'
-            })
         });
 
         const getChapterByAnswer = (answer) => {
