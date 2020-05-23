@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W Eiendomsmegling - Megler</title>
+    <style>
+        body {
+            font-size: 16px;
+        }
+        .container {
+            padding: 30px;
+        }
+        .item {
+            margin: 15px 0;
+        }
+        .mail-main-text {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <h1>User Info:</h1>
+            <p>
+                Jeg er <span class="mail-main-text">{{ main_data.job }}</span>, som bor/jobber i
+                <span class="mail-main-text">{{ main_data.address }}</span> kommune.
+            </p>
+            <p>
+                jeg har <span class="mail-main-text"></span>{{ main_data.experience }} års erfaring fra meglerbransjen.
+            </p>
+            <p>
+                Jeg har som mål å selge <span class="mail-main-text">{{ main_data.sales }}</span> boliger,
+                til en snitt provisjon på kr <span class="mail-main-text">{{ main_data.commission }}</span> eks mva.
+            </p>
+            <p>
+                Det som er de to viktigste tingene for meg for å både trives og ha suksess som megler er
+                <span class="mail-main-text">{{ main_data.importantThingOne }}</span>
+                og <span class="mail-main-text">{{ main_data.importantThingTwo }}</span>
+            </p>
+        </div>
+        <div class="item">
+            <h1>Contact Info:</h1>
+            <p>
+                <span>Name: </span><span class="mail-main-text">{{ name }}</span>
+            </p>
+            <p>
+                <span>Email: </span><span class="mail-main-text">{{ email }}</span>
+            </p>
+            <p>
+                <span>Phone: </span><span class="mail-main-text">{{ phone }}</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+                 

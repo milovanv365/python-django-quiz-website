@@ -1,0 +1,14 @@
+@media only screen and (min-width: 992px) {
+    .sm-only {
+        display: none;
+
+    }
+}
+@media only screen and (max-width: 991px) {
+    .lg-only {
+        display: none;
+    }
+    .quiz-special-box {
+        width: 60px;
+    }
+}

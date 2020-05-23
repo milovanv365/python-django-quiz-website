@@ -1,5 +1,11 @@
+import json
+import time
+
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import View
+from django.core.mail import EmailMessage
+from django.template.loader import get_template
 
 
 class IndexView(View):
@@ -91,3 +97,39 @@ class QuizStepFiveView(View):
 
     def get(self, request):
         return render(request, template_name=self.template_url)
+
+
+class QuizSendView(View):
+    def post(self, request, *args, **kwargs):
+        response = HttpResponse()
+        response['Content-Type'] = 'text/plain'
+
+        name = request.POST.get('name', None)
+        email = request.POST.get('email', None)
+        phone = request.POST.get('phone', None)
+
+        main_data = request.POST.get('main_data')
+        main_data = json.loads(main_data)
+
+        email_data = {
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'main_data': main_data
+        }
+
+        try:
+            subject = "W Eiendomsmegling - Megler"
+            to_email = ['milovanv365@gmail.com']
+            from_email = "noreply@megler.weiendomsmegling.no"
+            message = get_template('email.html').render(email_data)
+            msg = EmailMessage(subject, message, from_email, to_email)
+            msg.content_subtype = 'html'
+            msg.send()
+            print('email has been sent')
+        except IOError as e:
+            return e
+
+        response.write('success')
+
+        return response

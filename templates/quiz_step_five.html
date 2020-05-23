@@ -102,34 +102,52 @@
         <div class="modal hide fade" id="SeligBolig" style="display: none;" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
+                    <div class="loading-icon-box">
+                        <img src="{% static 'assets/img/ajax-loader.gif' %}" class="loading-icon">
+                    </div>
                     <div class="enquiryPopup">
                         <div class="modal-header border-0">
                             <h4 class="modal-title w-100" id="selge_modal_title">
                                 <div class="popLogo"><img src="{% static 'assets/img/logo2.png' %}"></div>
+                                <div class="after-sending d-none">
+                                    Takk for din henvendelse.
+                                    <p>En W kunderådgiver vil ta kontakt med deg snarest.</p>
+                                </div>
                             </h4>
                             <button type="button" class="close" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></button>
                         </div>
                         <div class="modal-body" id="selge_form_body">
-                        <div id="validation_error_message" class="btn-danger text-center hide"></div>
-                        <form role="form" id="contact_form" class="contact_form" data-toggle="validator">
-                            <div class="formPoup din-box">
-                                <div class="popupRow">
-                                    <input type="text" name="name" id="name" placeholder="Navn">
+                            <div class="before-sending">
+                                <div class="btn-danger text-center">
+                                    <span id="empty_field_error_message">Du må oppgi e-post eller telefonnummer for at vi skal kunne kontakte deg.</span>
+                                    <span id="email_error_message">E-postadressen er ugyldig.</span>
+                                    <span id="agreement_error_message">Du må godta brukeravtale.</span>
                                 </div>
-                                <div class="popupRow">
-                                    <input type="text" name="email" id="email" placeholder="Epost">
-                                </div>
-                                <div class="popupRow">
-                                    <input type="text" name="phone" id="phone" placeholder="Tlf">
-                                </div>
-                                <div class="popupRow">
-                                    <input type="checkbox" name="user_agreement" id="user_agreement">
-                                </div>
-                                <div class="popupRow popupMubmit text-center">
-                                    <button type="submit" class="btn1 btnPadding profileButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send</font></font></button>
-                                </div>
+                                <form id="contact_form" class="contact_form" enctype="multipart/form-data" novalidate
+                                      onsubmit="event.preventDefault();">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="main_data" id="main_data">
+
+                                    <div class="formPoup din-box">
+                                        <div class="popupRow">
+                                            <input type="text" name="name" id="name" placeholder="Navn" required>
+                                        </div>
+                                        <div class="popupRow">
+                                            <input type="text" name="email" id="email" placeholder="Epost" required>
+                                        </div>
+                                        <div class="popupRow">
+                                            <input type="number" name="phone" id="phone" placeholder="Tlf" required>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="user_agreement" name="user_agreement" required>
+                                            <label class="custom-control-label" for="user_agreement">Accept user agreement</label>
+                                        </div>
+                                        <div class="popupRow popupMubmit text-center">
+                                            <button type="submit" class="btn1 btnPadding contactSubmitButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send</font></font></button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
                         </div>
                     </div>
                 </div>
@@ -200,6 +218,8 @@
         ]
 
         $(document).ready(function () {
+            loadData()
+            initErrorMsg()
             // step2
             const sales = parseInt(localStorage.getItem('sales'))
             const commission = parseInt(localStorage.getItem('commission'))
@@ -223,7 +243,88 @@
             const chapterB = getChapterByAnswer(importantThingTwo)
             $('.chapter-a').text(chapterA)
             $('.chapter-b').text(chapterB)
+
+            $('.contactSubmitButton').click(function () {
+                $('#empty_field_error_message').hide()
+                let email = $('#email').val()
+                let phone = $('#phone').val()
+                let user_agreement = $('#user_agreement').prop("checked")
+
+                initErrorMsg()
+                if (email === '' && phone === '') {
+                    $('#empty_field_error_message').show()
+                    return
+                } else {
+                    if (email !=='' && !validateEmail(email)) {
+                        $('#email_error_message').show()
+                        return
+                    }
+                }
+                if (!user_agreement) {
+                    $('#agreement_error_message').show()
+                    return
+                }
+
+                console.log('111')
+                let data = $('#contact_form').serialize();
+
+                $('.loading-icon-box').css('display', 'block')
+                $('.contactSubmitButton').attr('disabled', true)
+
+                $.ajax({
+                    url: '/quiz/api/send',
+                    type: 'POST',
+                    data: data
+                }).success(function (data) {
+                    $(".loading-icon-box").css("display", "none")
+                    $('.contactSubmitButton').attr('disabled', false)
+
+                    if (data === 'success') {
+                        $('.modal-body').hide()
+                        $('.after-sending').removeClass('d-none')
+                    } else {
+                        alert('Feil !!!');
+                    }
+                }).error(function (data) {
+                    $(".loading-icon-box").css("display", "none")
+                    console.info(data)
+                })
+            })
         });
+
+        const loadData = () => {
+            const job = localStorage.getItem('job')
+            const address = localStorage.getItem('address')
+            const experience = localStorage.getItem('experience')
+            const sales = localStorage.getItem('sales')
+            const commission = localStorage.getItem('commission')
+
+            const importantThingOne = localStorage.getItem('importantThingOne')
+            const importantThingTwo = localStorage.getItem('importantThingTwo')
+
+            const additionalData = {
+                job,
+                address,
+                experience,
+                sales,
+                commission,
+                importantThingOne,
+                importantThingTwo
+            }
+
+            $('#main_data').val(JSON.stringify(additionalData))
+        }
+
+        const initErrorMsg = () => {
+            $('#empty_field_error_message').hide()
+            $('#email_error_message').hide()
+            $('#agreement_error_message').hide()
+        }
+
+        const validateEmail = (email) => {
+            let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
 
         const getChapterByAnswer = (answer) => {
             let result = ''

@@ -21,7 +21,7 @@
                             <a class="" disabled="" href="/quiz/step_two">Step2</a>
                             <a class="" disabled="" href="/quiz/step_three">Step3</a>
                             <a class="active" disabled="" href="/quiz/step_four">Step4</a>
-                            <a class="" disabled="" href="/quiz/step_five">Step5</a>
+                            <a class="" disabled="" href="#">Step5</a>
                         </div>
                         <div class="header-progress-box lg-only">
                             <div class="HeaderProgress">
@@ -77,14 +77,14 @@
                     <select class="main-select-input" name="thing_one" id="thing_one" >
                         <option value="" class="disabled-option" selected disabled>--select--</option>
                         {% for x in important_things %}
-                            <option value="{{ x.value }}">{{ x.label}}</option>
+                            <option value="{{ x.label }}">{{ x.label}}</option>
                         {% endfor %}
                     </select>
                     <span>og</span>
                     <select class="main-select-input" name="thing_two" id="thing_two">
                         <option value="" class="disabled-option" selected disabled>--select--</option>
                         {% for x in important_things %}
-                            <option value="{{ x.value }}">{{ x.label }}</option>
+                            <option value="{{ x.label }}">{{ x.label }}</option>
                         {% endfor %}
                     </select>
                 </div>
