@@ -72,29 +72,30 @@
             <h2 class="main-caption">En ny og bedre meglerhverdag starter her</h2>
             <p class="sub-caption">La oss finne et lønnsestimat og hvordan din hverdag kan bli hos W Eiendomsmegling.</p>
             <div class="quiz-answer">
-                <p>Takk for dine svar.</p>
-                <p>Som en megler hos W vil du ha en brutto lønn på kr <span>(calculation 1)</span> og <span>(calculation 2)</span> i kjøregodtgjørelser.</p>
-                <p>Totalt: <span>(calculation 3)</span></p>
-                <p>Men penger er ikke alt. Du må også ha en arbeidsplass hvor du trives og som tilrettelegger for dine behov.</p>
-                <div>
+                <div class="quiz-form-row text-left">
+                    <p>Takk for dine svar.</p>
+                    <p>Som en megler hos W vil du ha en brutto lønn på kr <span class="calculation1"></span> og <span class="calculation2"></span> i kjøregodtgjørelser.</p>
+                    <p>Totalt: <span class="calculation3"></span></p>
+                    <p>Men penger er ikke alt. Du må også ha en arbeidsplass hvor du trives og som tilrettelegger for dine behov.</p>
+                </div>
+                <div class="quiz-form-row text-left">
                     <p>Chapter A:</p>
-                    <p></p>
-                </div>
-                <div>
+                    <p class="chapter-a"></p>
                     <p>Chapter B:</p>
-                    <p></p>
-                </div>
-                <div>
+                    <p class="chapter-b"></p>
                     <p>Chapter C:</p>
                     <p>I tillegg kommer en mangde andre grunner som trolig vil gjøre at du kunne trivdes godt hos W Eiendomsmegling.
                         Dersom du har lyst til å lære mer om mulighetene og avklare om vi er en god match.
                         Så er vi alltid åpne for en uforpklitende og konfidensiell prat.
                     </p>
                 </div>
-                <p>Du kan bruke skjemaet ved å trykke på knappen nedenfor så tar vi kontakt med deg,
-                    eller du kan sende oss en epost til stian@wmegling.
-                    no eller ringe oss på 91 90 93 15.
-                </p>
+                <div class="quiz-form-row text-left">
+                    <p>
+                        Du kan bruke skjemaet ved å trykke på knappen nedenfor så tar vi kontakt med deg,
+                        eller du kan sende oss en epost til stian@wmegling.
+                    </p>
+                    <p>no eller ringe oss på 91 90 93 15.</p>
+                </div>
             </div>
             <button type="button" class="btn1" id="nextBtn">Neste</button>
         </div>
@@ -103,12 +104,126 @@
 
 {% block script %}
     <script type="text/javascript">
-        let chapters= {
-        }
+        let chapters= [
+            {
+                'answer': 'a great work environment / good colleagues',
+                'chapter': 'Det er viktig med et supert arbeidsmiljø One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections'
+            },
+            {
+                'answer': 'opportunity for personal development',
+                'chapter': 'Personlig utvikling happens when One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.'
+            },
+            {
+                'answer': 'the best technology',
+                'chapter': 'Teknologi bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+            },
+            {
+                'answer': 'opportunity for partnership',
+                'chapter': 'Partnere bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+            },
+            {
+                'answer': 'high salary',
+                'chapter': 'Lønnen din bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+            },
+            {
+                'answer': 'freedom',
+                'chapter': 'Frihet bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+            },
+            {
+                'answer': 'flexibility',
+                'chapter': 'Fleksibilitet og bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+            },
+            {
+                'answer': 'to be able to influence the workplace',
+                'chapter': 'Arbeidsplassen er  far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+            },
+            {
+                'answer': 'quality',
+                'chapter': 'Kvalitet  er ikke til å kimse av she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then'
+            },
+            {
+                'answer': 'safety',
+                'chapter': 'Trygghet she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then.'
+            },
+            {
+                'answer': 'to have back office',
+                'chapter': 'Backoffice she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then'
+            },
+            {
+                'answer': 'the best toolbox',
+                'chapter': 'Verktøykassen she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then'
+            },
+            {
+                'answer': 'winning culture',
+                'chapter': 'Vinnerkulturen Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.'
+            },
+            {
+                'answer': 'good lead approach',
+                'chapter': 'Vinnerkulturen Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.'
+            }
+        ]
+
         $(document).ready(function () {
+            // step2
+            const sales = parseInt(localStorage.getItem('sales'))
+            const commission = parseInt(localStorage.getItem('commission'))
+            // step3
+            const distance = parseInt(localStorage.getItem('distance'))
+            const dataUsage = parseInt(localStorage.getItem('dataUsage'))
+            // step4
+            const importantThingOne = localStorage.getItem('importantThingOne')
+            const importantThingTwo = localStorage.getItem('importantThingTwo')
+
+            const calculation2 = distance * 3.5
+            const calculation2b = getCalculation2bValue(dataUsage)
+            const calculation1 = (sales * commission * 0.5) - (calculation2 + calculation2b)
+            const calculation3 = calculation1 + calculation2
+
+            $('.calculation1').text(calculation1)
+            $('.calculation2').text(calculation2)
+            $('.calculation3').text(calculation3)
+
+            const chapterA = getChapterByAnswer(importantThingOne)
+            const chapterB = getChapterByAnswer(importantThingTwo)
+            $('.chapter-a').text(chapterA)
+            $('.chapter-b').text(chapterB)
+
             $('#nextBtn').click(function () {
                 document.location.href='/quiz/step_four'
             })
         });
+
+        const getChapterByAnswer = (answer) => {
+            let result = ''
+            $.each(chapters, function( index, obj ) {
+                if (obj.answer === answer) {
+                    result = obj.chapter
+                    return false
+                }
+            })
+
+            return result
+        }
+
+        const getCalculation2bValue = (answer) => {
+            let result
+            if (answer >= 1 && answer <= 2) {
+                result = 2988
+            } else if (answer >= 3 && answer <= 4) {
+                result = 4188
+            } else if (answer >= 5 && answer <= 6) {
+                result = 4548
+            } else if (answer >= 7 && answer <= 10) {
+                result = 5148
+            } else if (answer >= 11 && answer <= 15) {
+                result = 5748
+            } else if (answer >= 16 && answer <= 20) {
+                result = 6348
+            } else {
+                result = 0
+            }
+
+            return result
+        }
     </script>
 {% endblock %}

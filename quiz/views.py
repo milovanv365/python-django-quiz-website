@@ -21,15 +21,15 @@ class QuizStepTwoView(View):
 
     def get(self, request):
         sales_values = []
-        for x in range(0, 155, 5):
-            if x == 0:
-                sales_values.append(1)
-            else:
-                sales_values.append(x)
+        for x in range(25, 155, 5):
+            sales_values.append(x)
 
         commission_values = []
-        for x in range(1000, 100000, 2500):
-            commission_values.append(x)
+        for x in range(20000, 102500, 2500):
+            if x == 0:
+                commission_values.append(1000)
+            else:
+                commission_values.append(x)
 
         context = {
             'sales_values': sales_values,
