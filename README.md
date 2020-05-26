@@ -3,7 +3,7 @@
 ## What is the use of this Repo
 
 This Project is a Django Quiz website Project which demonstrates the following
-1. Using Django template
+1. Using Django template and Bootstrap 4
 4. Integrating Email System(Mailgun)
 5. Using Basic Routing in Django
 6. Integrating Ajax call in Django
