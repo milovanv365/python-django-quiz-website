@@ -7,21 +7,21 @@
         <div class="quiz-header px-4 py-0">
             <div class="d-flex align-items-center">
                 <div class="quiz-logo-box">
-                    <a href="#">
+                    <a href="./">
                         <img class="logo-quiz" src="{% static 'assets/img/premium.png' %}" alt="">
                     </a>
                 </div>
                 <div class="quiz-nav-box">
                     <nav class="quiz-header-links" role="navigation">
                         <div class="sm-only text-center">
-                            <a class="active" href="/quiz/step_three" aria-current="page" disabled="">Step(5/5)</a>
+                            <a class="active" aria-current="page" disabled="">Oppsummering(5/5)</a>
                         </div>
                         <div class="lg-only">
-                            <a class="" href="/quiz/step_one" aria-current="page" disabled="">Step1</a>
-                            <a class="" disabled="" href="/quiz/step_two">Step2</a>
-                            <a class="" disabled="" href="/quiz/step_three">Step3</a>
-                            <a class="" disabled="" href="/quiz/step_four">Step4</a>
-                            <a class="active" disabled="" href="/quiz/step_five">Step5</a>
+                            <a class="" href="./step_one" aria-current="page" disabled="">Om deg</a>
+                            <a class="" disabled="" href="./step_two">Omsetning</a>
+                            <a class="" disabled="" href="./step_three">Diverse</a>
+                            <a class="" disabled="" href="./step_four">Suksessfaktorer</a>
+                            <a class="active" disabled="" href="./step_five">Oppsummering</a>
                         </div>
                         <div class="header-progress-box lg-only">
                             <div class="HeaderProgress">
@@ -40,19 +40,13 @@
                 </div>
                 <div class="quiz-special-box">
                     <div class="DiscountBadge lg-only">
-                        <div class="special-icon-box">
-                            <svg fill="#ffffff"width="32" height="32" alt="Present Icon" viewBox="0 0 44 44" version="1.1"><path d="M36.5,20.6093474 L36.5,15.6834215 L7.5,15.6834215 L7.5,20.6093474 L36.5,20.6093474 Z M6.5,14.6834215 L37.5,14.6834215 L37.5,21.6093474 L6.5,21.6093474 L6.5,14.6834215 Z M21.5,21.1093474 L22.5,21.1093474 L22.5,36.9823633 L21.5,36.9823633 L21.5,21.1093474 Z M22.5,21.1093474 L22.5,36.9823633 L21.5,36.9823633 L21.5,21.1093474 L22.5,21.1093474 Z M10.1433895,20.8156966 L11.0155482,32.2021855 C11.1901404,34.6268928 13.2537126,36.5 15.7435233,36.5 L28.2564767,36.5 C30.7462874,36.5 32.8098596,34.6268928 32.9846209,32.1999089 L33.8566103,20.8156966 L10.1433895,20.8156966 Z M34.8949127,20.353883 L33.9818694,32.274005 C33.7692194,35.2272531 31.2653706,37.5 28.2564767,37.5 L15.7435233,37.5 C12.7346294,37.5 10.2307806,35.2272531 10.0182997,32.2762816 L9.06386415,19.8156966 L34.9361358,19.8156966 L34.8949127,20.353883 Z M18.4141656,10.3772967 C16.9995862,8.20947802 15.8271554,7.5 13.6839378,7.5 C11.627303,7.5 10.0259067,9.07629517 10.0259067,11.0917108 C10.0259067,13.1071264 11.627303,14.6834215 13.6839378,14.6834215 L21.1289363,14.6834215 C20.2688634,13.2275126 19.3643489,11.7927229 18.4141656,10.3772967 Z M13.6839378,15.6834215 C11.0785237,15.6834215 9.02590674,13.6629783 9.02590674,11.0917108 C9.02590674,8.52044319 11.0785237,6.5 13.6839378,6.5 C16.1845026,6.5 17.66131,7.39366669 19.2480298,9.8253657 C20.3699027,11.4964694 21.4321127,13.2000327 22.4329989,14.9333976 L22.8660806,15.6834215 L13.6839378,15.6834215 Z M30.1217617,14.6834215 C32.1368375,14.6834215 33.7020725,13.1450424 33.7020725,11.1798942 C33.7020725,9.21474592 32.1368375,7.67636684 30.1217617,7.67636684 C28.032931,7.67636684 26.881606,8.37200448 25.4816546,10.5199076 C25.2561694,10.8052097 24.7428485,11.6049424 24.0473089,12.7418801 C24.0023668,12.8153794 24.0023668,12.8153794 23.9574573,12.8889658 C23.6175698,13.4461441 23.2584061,14.0434716 22.9026908,14.6408473 C22.894164,14.6551669 22.8857149,14.6693591 22.8773447,14.6834215 L30.1217617,14.6834215 Z M30.1217617,15.6834215 L21.1258279,15.6834215 L21.5690238,14.9299269 C21.6633726,14.7695209 21.8290522,14.4893279 22.043483,14.1292206 C22.4008835,13.5290149 22.7618067,12.928761 23.1037597,12.3681968 C23.1489926,12.2940805 23.1489926,12.2940805 23.1942757,12.2200235 C23.9157808,11.0406422 24.4358277,10.2304307 24.6702715,9.93720539 C26.2192557,7.55635325 27.6756898,6.67636684 30.1217617,6.67636684 C32.6852855,6.67636684 34.7020725,8.65855027 34.7020725,11.1798942 C34.7020725,13.7012381 32.6852855,15.6834215 30.1217617,15.6834215 Z"></path></svg>
-                        </div>
                         <span style="margin-top: 4px; margin-left: 10px;">
                             <h2 class="Title separe">DRIVE EGET KONTOR?</h2>
                             <p class="Text"><small>Sjekk ut W Flex her</small></p>
                         </span>
                     </div>
                     <div class="DiscountBadge sm-only">
-                        <div class="special-icon-box">
-                            <svg fill="#ffffff" width="24" height="24" alt="Present Icon" viewBox="0 0 44 44" version="1.1"><path d="M36.5,20.6093474 L36.5,15.6834215 L7.5,15.6834215 L7.5,20.6093474 L36.5,20.6093474 Z M6.5,14.6834215 L37.5,14.6834215 L37.5,21.6093474 L6.5,21.6093474 L6.5,14.6834215 Z M21.5,21.1093474 L22.5,21.1093474 L22.5,36.9823633 L21.5,36.9823633 L21.5,21.1093474 Z M22.5,21.1093474 L22.5,36.9823633 L21.5,36.9823633 L21.5,21.1093474 L22.5,21.1093474 Z M10.1433895,20.8156966 L11.0155482,32.2021855 C11.1901404,34.6268928 13.2537126,36.5 15.7435233,36.5 L28.2564767,36.5 C30.7462874,36.5 32.8098596,34.6268928 32.9846209,32.1999089 L33.8566103,20.8156966 L10.1433895,20.8156966 Z M34.8949127,20.353883 L33.9818694,32.274005 C33.7692194,35.2272531 31.2653706,37.5 28.2564767,37.5 L15.7435233,37.5 C12.7346294,37.5 10.2307806,35.2272531 10.0182997,32.2762816 L9.06386415,19.8156966 L34.9361358,19.8156966 L34.8949127,20.353883 Z M18.4141656,10.3772967 C16.9995862,8.20947802 15.8271554,7.5 13.6839378,7.5 C11.627303,7.5 10.0259067,9.07629517 10.0259067,11.0917108 C10.0259067,13.1071264 11.627303,14.6834215 13.6839378,14.6834215 L21.1289363,14.6834215 C20.2688634,13.2275126 19.3643489,11.7927229 18.4141656,10.3772967 Z M13.6839378,15.6834215 C11.0785237,15.6834215 9.02590674,13.6629783 9.02590674,11.0917108 C9.02590674,8.52044319 11.0785237,6.5 13.6839378,6.5 C16.1845026,6.5 17.66131,7.39366669 19.2480298,9.8253657 C20.3699027,11.4964694 21.4321127,13.2000327 22.4329989,14.9333976 L22.8660806,15.6834215 L13.6839378,15.6834215 Z M30.1217617,14.6834215 C32.1368375,14.6834215 33.7020725,13.1450424 33.7020725,11.1798942 C33.7020725,9.21474592 32.1368375,7.67636684 30.1217617,7.67636684 C28.032931,7.67636684 26.881606,8.37200448 25.4816546,10.5199076 C25.2561694,10.8052097 24.7428485,11.6049424 24.0473089,12.7418801 C24.0023668,12.8153794 24.0023668,12.8153794 23.9574573,12.8889658 C23.6175698,13.4461441 23.2584061,14.0434716 22.9026908,14.6408473 C22.894164,14.6551669 22.8857149,14.6693591 22.8773447,14.6834215 L30.1217617,14.6834215 Z M30.1217617,15.6834215 L21.1258279,15.6834215 L21.5690238,14.9299269 C21.6633726,14.7695209 21.8290522,14.4893279 22.043483,14.1292206 C22.4008835,13.5290149 22.7618067,12.928761 23.1037597,12.3681968 C23.1489926,12.2940805 23.1489926,12.2940805 23.1942757,12.2200235 C23.9157808,11.0406422 24.4358277,10.2304307 24.6702715,9.93720539 C26.2192557,7.55635325 27.6756898,6.67636684 30.1217617,6.67636684 C32.6852855,6.67636684 34.7020725,8.65855027 34.7020725,11.1798942 C34.7020725,13.7012381 32.6852855,15.6834215 30.1217617,15.6834215 Z"></path></svg>
-                        </div>
-                        <p class="Text" style="text-transform: uppercase; color: rgb(21, 58, 51); font-weight: 700; margin-top: 8px; font-size: 12px;">W Flex</p>
+                        <p class="Text badge-text">W Flex</p>
                     </div>
                 </div>
                 <div class="HeaderProgress sm-only">
@@ -69,21 +63,19 @@
             </div>
         </div>
         <div class="quiz-content">
-            <h2 class="main-caption">En ny og bedre meglerhverdag starter her</h2>
-            <p class="sub-caption">La oss finne et lønnsestimat og hvordan din hverdag kan bli hos W Eiendomsmegling.</p>
-            <div class="quiz-answer">
+            <div class="quiz-answer overview">
                 <div class="quiz-form-row text-left">
-                    <p>Takk for dine svar.</p>
+                    <p class="emphasis-text text-center">Takk for dine svar.</p>
                     <p>Som en megler hos W vil du ha en brutto lønn på kr <span class="calculation1"></span> og <span class="calculation2"></span> i kjøregodtgjørelser.</p>
-                    <p>Totalt: <span class="calculation3"></span></p>
+                    <p class="color-main font-weight-bold">Totalt: <span class="calculation3"></span></p>
                     <p>Men penger er ikke alt. Du må også ha en arbeidsplass hvor du trives og som tilrettelegger for dine behov.</p>
                 </div>
                 <div class="quiz-form-row text-left">
-                    <p>Chapter A:</p>
+                    <p class="headline headline-a"></p>
                     <p class="chapter-a"></p>
-                    <p>Chapter B:</p>
+                    <p class="headline headline-b"></p>
                     <p class="chapter-b"></p>
-                    <p>Chapter C:</p>
+                    <p class="headline">Lyst til å lære mer om W?</p>
                     <p>I tillegg kommer en mangde andre grunner som trolig vil gjøre at du kunne trivdes godt hos W Eiendomsmegling.
                         Dersom du har lyst til å lære mer om mulighetene og avklare om vi er en god match.
                         Så er vi alltid åpne for en uforpklitende og konfidensiell prat.
@@ -92,9 +84,9 @@
                 <div class="quiz-form-row text-left">
                     <p>
                         Du kan bruke skjemaet ved å trykke på knappen nedenfor så tar vi kontakt med deg,
-                        eller du kan sende oss en epost til <b>stian@wmegling.no</b>.
+                        eller du kan sende oss en epost til <b class="color-main">stian@wmegling.no</b>
+                        eller ringe oss på <b class="color-main">98 15 11 90</b>.
                     </p>
-                    <p>no eller ringe oss på <b>91 90 93 15</b>.</p>
                 </div>
             </div>
             <a href="#" class="btn1" id="nextBtn" data-toggle="modal" data-target="#SeligBolig">Bli kontaktet</a>
@@ -103,15 +95,18 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="loading-icon-box">
-                        <img src="{% static 'assets/img/ajax-loader.gif' %}" class="loading-icon">
+                        <img src="assets/img/ajax-loader.gif" class="loading-icon">
                     </div>
                     <div class="enquiryPopup">
                         <div class="modal-header border-0">
                             <h4 class="modal-title w-100" id="selge_modal_title">
-                                <div class="popLogo"><img src="{% static 'assets/img/logo2.png' %}"></div>
+                                <div class="popLogo"><img src="{% static 'assets/img/premium.png' %}"></div>
+                                <div class="before-sending">
+                                    Legg igjen din kontakt informasjon så kontakter vi deg. All informasjon blir behandlet konfidensielt.
+                                </div>
                                 <div class="after-sending d-none">
-                                    Takk for din henvendelse.
-                                    <p>En W kunderådgiver vil ta kontakt med deg snarest.</p>
+                                    Takk for din henvendelse!
+                                    <p>Vi vil ta kontakt med deg snarest.</p>
                                 </div>
                             </h4>
                             <button type="button" class="close" data-dismiss="modal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></button>
@@ -125,7 +120,6 @@
                                 </div>
                                 <form id="contact_form" class="contact_form" enctype="multipart/form-data" novalidate
                                       onsubmit="event.preventDefault();">
-                                    {% csrf_token %}
                                     <input type="hidden" name="main_data" id="main_data">
 
                                     <div class="formPoup din-box">
@@ -140,7 +134,7 @@
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="user_agreement" name="user_agreement" required>
-                                            <label class="custom-control-label" for="user_agreement">Accept user agreement</label>
+                                            <label class="custom-control-label modal-intro-text" for="user_agreement">Jeg aksepterer at W Eiendomsmegling lagrer informasjonen og tar kontakt med meg</label>
                                         </div>
                                         <div class="popupRow popupMubmit text-center">
                                             <button type="submit" class="btn1 btnPadding contactSubmitButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send</font></font></button>
@@ -160,60 +154,64 @@
     <script type="text/javascript">
         let chapters= [
             {
-                'answer': 'a great work environment / good colleagues',
-                'chapter': 'Det er viktig med et supert arbeidsmiljø One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections'
+                'answer': 'et supert arbeidsmiljø/gode kolleger',
+                'headline': 'Et supert arbeidsmiljø',
+                'chapter': '«Like barn leker best» - Dette handler ikke om kjønn, kultur eller bakgrunn, men at våre team består av ulike individer med én felles interesse; å være den beste utgaven av så selv og på den måten oppnå sitt fulle potensiale.'
             },
             {
-                'answer': 'opportunity for personal development',
-                'chapter': 'Personlig utvikling happens when One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.'
+                'answer': 'mulighet for personlig utvikling',
+                'headline': 'Mulighet for personlig utvikling',
+                'chapter': 'Personlig utvikling betinger at du er åpen for forandringer. Vi har et stort fokus på å legge til rette for at du skal nå dine mål og drømmer og vil sammen med deg legge en strategi for dette. Det krever likevel at du selv må ta ansvar for å prioritere og gjennomføre det som skal til for at du skal oppnå dine personlige mål.'
             },
             {
-                'answer': 'the best technology',
-                'chapter': 'Teknologi bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+                'answer': 'den beste teknologien',
+                'headline': 'Den beste teknologien',
+                'chapter': 'De fleste foretak påstår at de har det beste produktet og den beste teknologien, samtidig som de benytter seg av de samme tredjepartsleverandørene som alle andre. W Eiendomsmegling er heleid av et teknologiselskap, Webmegling Technology AS, hvor vi utvikler egne løsninger som skal gjøre hverdagen til våre meglere vesentlig mer fleksibel og effektiv samt gi våre kunder den beste opplevelsen. Vi lanserer snart våre egne løsninger for salg av bruktbolig og nybygg, hvor vi som eneste meglerforetak i Norge har fått støtte fra Innovasjon Norge til utvikling av dette.'
             },
             {
-                'answer': 'opportunity for partnership',
-                'chapter': 'Partnere bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+                'answer': 'mulighet for partnerskap',
+                'headline': 'Mulighet for partnerskap',
+                'chapter': 'Vi er opptatte av å dele og knytte til oss de beste menneskene som er med på å løfte både lokalkontoret man jobber på og kjeden som en helhet. For de rette kandidatene vil det her selvsagt være mulighet for partnerskap via vårt partnerprogram.'
             },
             {
-                'answer': 'high salary',
-                'chapter': 'Lønnen din bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+                'answer': 'høy lønn',
+                'headline': 'Høy lønn',
+                'chapter': 'Vårt mål er å disrupte den tradisjonelle franchisemodellen, hvor vi blant annet legger til rette for at du som megler skal sitte igjen med mest mulig av din provisjon. Hos oss vil du derfor få 50% provisjon fra første krone. Dette er mulig fordi våre kontorer har lavere kostnader hos oss enn det som er vanlig i tradisjonelle franchiser.'
             },
             {
-                'answer': 'freedom',
-                'chapter': 'Frihet bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+                'answer': 'frihet',
+                'headline': 'Frihet og fleksibilitet',
+                'chapter': 'Ikke alle ønsker eller orker å ofre venner, familie og fritid i den evige jakten på «suksess». Vi ser dessverre altfor mange dyktige meglere som bytter bransje etter noen år fordi man ikke ser hvordan en skal klare å oppnå suksess både som eiendomsmegler og på fritiden. Vi tror på å jobbe smartere! Hos oss styrer du din egen hverdag og har verktøy som effektiviserer den. I tillegg har du høy provisjon på hver bolig du selger slik at du både kan tjene godt og ha tid til å nyte livet.'
             },
             {
-                'answer': 'flexibility',
-                'chapter': 'Fleksibilitet og bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What\'s happened to me?" he thought. It wasn\'t a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.'
+                'answer': 'å kunne påvirke arbeidsplassen',
+                'headline': 'Å kunne påvirke arbeidsplassen',
+                'chapter': 'Vår viktigste jobb er å sørge for at du som eiendomsmegler har det best mulig slik at du kan gi 100% til våre kunder. Derfor vil også din stemme verdsettes høyt og vi ønsker å involvere deg uavhengig om du kommer rett fra skolebenken eller har flere års erfaring. Hos oss er det kort vei fra ide til gjennomføring.'
             },
             {
-                'answer': 'to be able to influence the workplace',
-                'chapter': 'Arbeidsplassen er  far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                'answer': 'kvalitet',
+                'headline': 'Kvalitet',
+                'chapter': 'Fokus på kvalitet er grunnleggende i alt vi gjør, det være seg opplæring og oppfølging av deg som megler, systemene og løsningene vi utvikler, eller produktene og leveransen vi tilbyr til våre kunder. I tillegg har vi fokus på din livskvalitet.'
             },
             {
-                'answer': 'quality',
-                'chapter': 'Kvalitet  er ikke til å kimse av she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then'
+                'answer': 'å ha backoffice',
+                'headline': 'Backoffice/assistent',
+                'chapter': 'Som en del av vårt konsept tilbyr vi en løsning med ekstern backoffice hvor du som megler selv kan bestemme om og når du vil ha bistand til det administrative arbeidet uten å måtte klarere dette med lederen din.'
             },
             {
-                'answer': 'safety',
-                'chapter': 'Trygghet she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then.'
+                'answer': 'den beste verktøykassen',
+                'headline': 'Den beste verktøykassen',
+                'chapter': 'Systemene vi bruker og produktene vi tilbyr til våre kunden er av høy kvalitet både innholdsmessig og visuelt. Ettersom vi er heleid av et teknologiselskap vil du også få tilgang til egenutviklete systemer som ingen andre i bransjen kan tilby.'
             },
             {
-                'answer': 'to have back office',
-                'chapter': 'Backoffice she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then'
+                'answer': 'vinnerkultur',
+                'headline': 'Vinnerkultur',
+                'chapter': 'Vi skal være den beste arbeidsplassen for deg som ønsker å være den beste utgaven av deg selv. Ambisjonsnivået kan variere blant meglerne, men felles for alle er lysten og evnen til å levere sitt ytterste for sine kunder hver eneste gang. Fellesskapet er viktigere enn enkeltindivider og laget må vinne sammen!'
             },
             {
-                'answer': 'the best toolbox',
-                'chapter': 'Verktøykassen she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then'
-            },
-            {
-                'answer': 'winning culture',
-                'chapter': 'Vinnerkulturen Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.'
-            },
-            {
-                'answer': 'good lead approach',
-                'chapter': 'Vinnerkulturen Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.'
+                'answer': 'god leadstilgang',
+                'headline': 'God tilgang til leads',
+                'chapter': 'Vi skal ikke vokse ved å ansette flest mulig. Vi skal sørge for at det er en sunn balanse mellom antall meglere pr. kontor og antall leads som kommer inn til kontoret. I tillegg vil vår markedsavdeling sørge for leadsgenererende tiltak samt løsninger for at du lettere vil få kunder av deg til å bli dine ambassadører.'
             }
         ]
 
@@ -235,14 +233,20 @@
             const calculation1 = (sales * commission * 0.5) - (calculation2 + calculation2b)
             const calculation3 = calculation1 + calculation2
 
-            $('.calculation1').text(calculation1)
-            $('.calculation2').text(calculation2)
-            $('.calculation3').text(calculation3)
+            const calculation1WithFormat = numberWithDots(calculation1)
+            const calculation2WithFormat = numberWithDots(calculation2)
+            const calculation3WithFormat = numberWithDots(calculation3)
+
+            $('.calculation1').text(calculation1WithFormat)
+            $('.calculation2').text(calculation2WithFormat)
+            $('.calculation3').text(calculation3WithFormat)
 
             const chapterA = getChapterByAnswer(importantThingOne)
             const chapterB = getChapterByAnswer(importantThingTwo)
-            $('.chapter-a').text(chapterA)
-            $('.chapter-b').text(chapterB)
+            $('.headline-a').text(chapterA.headline)
+            $('.chapter-a').text(chapterA.chapter)
+            $('.headline-b').text(chapterB.headline)
+            $('.chapter-b').text(chapterB.chapter)
 
             $('.contactSubmitButton').click(function () {
                 $('#empty_field_error_message').hide()
@@ -265,22 +269,23 @@
                     return
                 }
 
-                console.log('111')
                 let data = $('#contact_form').serialize();
 
                 $('.loading-icon-box').css('display', 'block')
                 $('.contactSubmitButton').attr('disabled', true)
 
                 $.ajax({
-                    url: '/quiz/api/send',
+                    url: './send.php',
                     type: 'POST',
                     data: data
                 }).success(function (data) {
                     $(".loading-icon-box").css("display", "none")
                     $('.contactSubmitButton').attr('disabled', false)
 
-                    if (data === 'success') {
+                    data = JSON.parse(data)
+                    if (data.status === 'success') {
                         $('.modal-body').hide()
+                        $('.before-sending').addClass('d-none')
                         $('.after-sending').removeClass('d-none')
                     } else {
                         alert('Feil !!!');
@@ -330,7 +335,7 @@
             let result = ''
             $.each(chapters, function( index, obj ) {
                 if (obj.answer === answer) {
-                    result = obj.chapter
+                    result = obj
                     return false
                 }
             })
@@ -356,6 +361,12 @@
                 result = 0
             }
 
+            return result
+        }
+
+        const numberWithDots = (x) => {
+            let result = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            result += ',-'
             return result
         }
     </script>

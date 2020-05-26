@@ -1,14 +1,103 @@
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1032px) {
     .sm-only {
         display: none;
+    }
 
+    .select-box-one {
+        width: 50% !important;
+    }
+    .select-box-two {
+         width: 22% !important;
+    }
+    .select-box-three {
+        width: 20% !important;
+    }
+    .select-box-four {
+        width: 16% !important;
+    }
+    .select-box-five {
+        width: 12% !important;
+    }
+    .quiz-content .btn1 {
+        margin-top: 30px;
     }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1031px) {
     .lg-only {
         display: none;
     }
     .quiz-special-box {
         width: 60px;
+    }
+    .quiz-header-links a {
+        width: 80%;
+    }
+    .quiz-logo-box {
+        min-width: 51px;
+    }
+}
+
+@media (max-width: 767px) {
+    .bgVideo {
+        left: -50%;
+    }
+
+    .innerHeaderCaption {
+        padding: 0px 15px;
+    }
+    .HeaderProgress.sm-only {
+        width: 86%;
+    }
+    .quiz-content {
+        width: 100%;
+        padding-left: 26px;
+        padding-right: 26px;
+        padding-top: 16px;
+    }
+    .quiz-content .main-caption {
+        font-size: 34px;
+    }
+    .quiz-content .sub-caption {
+        font-size: 18px;
+    }
+    .quiz-content .quiz-answer .quiz-form-row {
+        font-size: 24px;
+    }
+    .quiz-form-row p {
+        font-size: 0.7em;
+        line-height: 1.3em;
+    }
+    .quiz-answer.overview p {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+    .quiz-answer.overview p.emphasis-text {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .select-box-one {
+        width: 100% !important;
+    }
+    .select-box-two {
+        width: 40% !important;
+    }
+    .select-box-three {
+        width: 38% !important;
+    }
+    .select-box-four {
+        width: 34% !important;
+    }
+    .select-box-five {
+        width: 24% !important;
+    }
+    .quiz-content .btn1 {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .innerHeaderCaption h2 {
+        font-size: 35px;
     }
 }

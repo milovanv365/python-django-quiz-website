@@ -1,10 +1,13 @@
+body {
+    font: normal 14px/20px 'Roboto', sans-serif;
+}
 header {
     position: fixed;
     left: 0;
     right: 0;
     width: 100%;
     padding: 15px 0;
-    z-index: 999;
+    z-index: 9;
 }
 section, header, footer {
     display: block;
@@ -20,6 +23,10 @@ input[type="number"] {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+.color-main {
+    color: #a3875b
 }
 
 .container {
@@ -54,7 +61,7 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*color: #fff;*/
+    color: #fff;
     overflow: hidden;
 }
 .innerHeaderCaption h2 {
@@ -81,6 +88,7 @@ img {
 .videoBgSection .innerHeaderCaption {
     position: relative;
     z-index: 1;
+    padding: 20px;
 }
 .bgVideo {
     position: fixed;
@@ -89,6 +97,17 @@ img {
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
+}
+
+.video-overlap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #000;
+    opacity: 0.5;
 }
 
 .btn1 {
@@ -154,11 +173,14 @@ img {
     /*width: 180px;*/
     margin-right: auto;
 }
+.quiz-special-box .DiscountBadge > span {
+    color: #a3875b;
+}
 .quiz-special-box .special-icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(21, 58, 51);
+    background: #a5875b;
     width: 40px;
     height: 40px;
     border-radius: 0;
@@ -197,7 +219,7 @@ img {
 }
 .quiz-header-links a.active {
     font-weight: 500;
-    color: #f2674b;
+    color: #a5875b;
     cursor: default;
 }
 .quiz-header-links .sm-only a.active {
@@ -240,7 +262,7 @@ img {
 }
 .HeaderProgress-bar.active {
     width: 25%;
-    background: #153a33;
+    background: #a5875b;
 }
 .HeaderProgress-steps {
     position: absolute;
@@ -267,7 +289,7 @@ img {
     transition: border 0s ease;
 }
 .HeaderProgress-steps span.active {
-    border-color: #153a33;
+    border-color: #a5875b;
 }
 .HeaderProgress-steps span.inactive {
     border-color: #edeff2;
@@ -305,7 +327,6 @@ img {
     font-size: 16px;
     margin: 0 0 4px 0;
     text-transform: uppercase;
-    color: #153a33;
     line-height: 16px;
 }
 .Text {
@@ -323,18 +344,25 @@ img {
     margin: 0;
     line-height: 16px;
 }
+.DiscountBadge p.badge-text {
+    text-transform: uppercase;
+    color: #a5875b;
+    font-weight: 700;
+    margin-top: 8px;
+    font-size: 12px;
+}
 
 .quiz-content {
     width: 60%;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 32px 16px;
+    padding: 60px 16px 30px;
     text-align: center;
     font-family: neue-haas-grotesk-display, sans-serif;
     font-stretch: normal;
 }
-.quiz-content .main-caption,
-.quiz-content .sub-caption {
-    color: #153a33;
+.quiz-content .main-caption {
+    color: #a5875b;
 }
 .quiz-content .main-caption {
     margin: 24px 0;
@@ -349,9 +377,7 @@ img {
     line-height: 1.52;
     letter-spacing: normal;
 }
-.quiz-content .quiz-answer {
-    margin-top: 48px;
-}
+
 .quiz-content .quiz-answer .quiz-form-row {
     margin: 24px auto;
     text-align: center;
@@ -361,6 +387,12 @@ img {
     color: #153a33;
     letter-spacing: normal;
 }
+.quiz-content .quiz-answer .headline {
+    font-weight: bold;
+    color: #a3875b;
+}
+
+
 .quiz-form-row .main-text-input,
 .quiz-form-row .main-select-input {
     margin: 0 12px;
@@ -373,7 +405,7 @@ img {
     width: 180px;
     padding: 8px 8px 0 8px;
     text-align: center;
-    color: #f2674b;
+    color: #a5875b;
     line-height: 1.32;
     border: 0;
     border-bottom: 2px dotted #969799;
@@ -381,30 +413,56 @@ img {
     background-color: transparent;
 }
 .quiz-content .quiz-answer .main-text-input:hover {
-    border-bottom-color: #f5502f;
+    border-bottom-color: #a5875b;
 }
 .quiz-content .quiz-answer .main-text-input:focus {
     outline: none;
-    border-bottom: 2px solid #f5502f;
+    border-bottom: 2px solid #a5875b;
 }
 .quiz-content .quiz-answer .main-select-input {
     border: none;
-    background: transparent;
     border-bottom: 2px dotted #969799;
+    text-align: center;
+    text-align-last: center;
+    color: #555;
+    width: 92%;
 }
 .quiz-content .quiz-answer .main-select-input:focus {
     outline: none;
 }
+.quiz-content .quiz-answer .main-select-input option {
+    color: black;
+}
+.quiz-content .quiz-answer .main-select-input option:disabled {
+    color: #555555;
+}
 
+.quiz-answer.overview p {
+    font-size: 22px;
+    line-height: 1.6;
+}
+.quiz-answer p.emphasis-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #a3875b;
+}
 .modal-content {
     background: #fff;
     border-radius: 0px;
     border: none;
     box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.5);
+    padding-top:20px;
+}
+.modal-intro-text {
+    color: #555;
+    font-size: 14px;
 }
 .popLogo {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.popLogo img {
+    width: 15%;
 }
 .modal-header .close {
     position: absolute;
@@ -424,7 +482,7 @@ img {
     font-weight: 500;
 }
 .modal-title p {
-    font-size: 15px;
+    font-size: 18px;
     margin: 5px 0px;
 }
 
@@ -480,4 +538,18 @@ img {
     top:40%;
     left:40%;
     padding:2px;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
+    background: url('../assets/img/arrow_down.png') 100% / 20px no-repeat;   /* Add custom arrow */
+    cursor: pointer;
+    padding-left: 14px;
+    padding-right: 30px;
+}
+select.arrow-up {
+    background: url('../assets/img/arrow_up.png') 100% / 20px no-repeat;
 }

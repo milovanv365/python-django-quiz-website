@@ -4,32 +4,35 @@
 
 {% block content %}
     <div id="main" role="main">
-        <header>
-            <div class="container">
-                <div class="containerPadding">
-                    <div id="logo">
-                        <a href="#">
-                            <img class="logo-land" src="{% static 'assets/img/premium.png' %}" alt="">
-                        </a>
-                    </div>
-                    <div id="navigation" style="visibility: hidden;">
-                        <div id="navbtn">menu</div>
-                        <ul id="menu-nenu" class="nav-menu">
-                            <li><a href="http://flex.weiendomsmegling.no/#">KONTAKT</a></li>
-                        </ul>
-                    </div>
+    <header>
+        <div class="container">
+            <div class="containerPadding">
+                <div id="logo">
+                    <a href="#">
+                        <img class="logo-land" src="{% static 'assets/img/premium.png' %}" alt="">
+                    </a>
+                </div>
+                <div id="navigation" style="visibility: hidden;">
+                    <div id="navbtn">menu</div>
+                    <ul id="menu-nenu" class="nav-menu">
+                        <li><a href="http://flex.weiendomsmegling.no/#">KONTAKT</a></li>
+                    </ul>
                 </div>
             </div>
-        </header>
-        <section class="innerHeader  videoBgSection  blackOverlyBG">
-            <div class="innerHeaderCaption">
-                <h3>Få en bedre og mer lønnsom meglerhverdag</h3>
-                <h2>BLI EN DEL AV W EIENDOMSMEGLING</h2>
-                <a href="{% url 'quiz:quiz_step_one' %}" class="btn1">Se hvordan her</a>
+        </div>
+    </header>
+    <div class="innerHeader  videoBgSection  blackOverlyBG">
+        <div class="innerHeaderCaption">
+            <h3>Få en bedre og mer lønnsom meglerhverdag</h3>
+            <h2>BLI EN DEL AV W EIENDOMSMEGLING</h2>
+            <div class="mt-5">
+                <a href="quiz/step_one" class="btn1">Se hvordan her</a>
             </div>
-            <video autoplay="" loop="" muted="" playsinline="" class="bgVideo">
-                <source src="{% static 'assets/video/1013880362-sd.mp4' %}" type="video/mp4">
-            </video>
-        </section>
+        </div>
+        <video autoplay="" loop="" muted="" playsinline="" class="bgVideo">
+            <source src="{% static 'assets/video/1013880362-sd.mp4' %}" type="video/mp4">
+        </video>
     </div>
+    <div class="video-overlap"></div>
+</div>
 {% endblock %}
